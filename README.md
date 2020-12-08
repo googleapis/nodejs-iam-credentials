@@ -68,17 +68,17 @@ const {IAMCredentialsClient} = require('@google-iam/credentials');
 // const projectId = 'my-project'
 
 // Creates a client
-// eslint-disable-next-line no-unused-vars
-const client = new {IAMCredentialsClient}();
+const client = new IAMCredentialsClient();
 
 //TODO(library generator): write the actual function you will be testing
-async function doSomething() {
- console.log('Developer! Change this code so that it shows how to use the library! See comments below on structure.')
- // const [thing] = await client.methodName({
- // });
- // console.info(thing);
+async function generateAccessToken() {
+  const token = await client.generateAccessToken({
+    name: `projects/-/serviceAccounts/${serviceAccount}`,
+    scope: [scopes],
+  });
+  console.info(token);
 }
-doSomething();
+generateAccessToken();
 
 ```
 
