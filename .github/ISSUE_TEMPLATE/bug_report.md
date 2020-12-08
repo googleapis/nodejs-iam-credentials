@@ -26,7 +26,7 @@ If the support paths suggested above still do not result in a resolution, please
   - OS:
   - Node.js version:
   - npm version:
-  - `@google-iam/credentials` version:
+  - `@google-cloud/iam-credentials` version:
 
 #### Steps to reproduce
 

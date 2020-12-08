@@ -7,7 +7,7 @@
   "release_level": "GA",
   "language": "nodejs",
   "repo": "googleapis/nodejs-iam-credentials",
-  "distribution_name": "@google-iam/credentials",
+  "distribution_name": "@google-cloud/credentials",
   "api_id": "iamcredentials.googleapis.com",
   "requires_billing": true
 }

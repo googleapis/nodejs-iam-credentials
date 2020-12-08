@@ -19,7 +19,7 @@ async function main(serviceAccount, scopes) {
 
   // remove this line after package is released
   // eslint-disable-next-line node/no-missing-require
-  const {IAMCredentialsClient} = require('@google-iam/credentials');
+  const {IAMCredentialsClient} = require('@google-cloud/iam-credentials');
 
   // TODO(developer): replace with your prefered project ID.
   // const projectId = 'my-project'

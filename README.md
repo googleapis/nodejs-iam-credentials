@@ -5,7 +5,7 @@
 # [IAM Service Account Credentials API: Node.js Client](https://github.com/googleapis/nodejs-iam-credentials)
 
 [![release level](https://img.shields.io/badge/release%20level-general%20availability%20%28GA%29-brightgreen.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
-[![npm version](https://img.shields.io/npm/v/@google-iam/credentials.svg)](https://www.npmjs.org/package/@google-iam/credentials)
+[![npm version](https://img.shields.io/npm/v/@google-cloud/iam-credentials.svg)](https://www.npmjs.org/package/@google-cloud/iam-credentials)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-iam-credentials/master.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-iam-credentials)
 
 
@@ -51,7 +51,7 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 ### Installing the client library
 
 ```bash
-npm install @google-iam/credentials
+npm install @google-cloud/iam-credentials
 ```
 
 
@@ -62,7 +62,7 @@ npm install @google-iam/credentials
 
 // remove this line after package is released
 // eslint-disable-next-line node/no-missing-require
-const {IAMCredentialsClient} = require('@google-iam/credentials');
+const {IAMCredentialsClient} = require('@google-cloud/iam-credentials');
 
 // TODO(developer): replace with your prefered project ID.
 // const projectId = 'my-project'
