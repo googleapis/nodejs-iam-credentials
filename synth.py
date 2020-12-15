@@ -30,7 +30,7 @@ for version in versions:
   name, 
   version,
   bazel_target=f"//google/iam/credentials/{version}:iam-credentials-{version}-nodejs")
-  s.copy(library, excludes=["package.json","README.md"])
+  s.copy(library, excludes=["package.json", "README.md"])
 
 # Copy common templates
 common_templates = gcp.CommonTemplates()
