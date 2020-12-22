@@ -3,8 +3,8 @@
     {
       "git": {
         "name": ".",
-        "remote": "sso://user/sofialeon/nodejs-iam-credentials",
-        "sha": "10b97741804e7202f89ee253202e479e46c0355d"
+        "remote": "https://github.com/googleapis/nodejs-iam-credentials.git",
+        "sha": "c932c45d344742352c5576f563bee5a0dcdbe514"
       }
     },
     {
