@@ -3,8 +3,8 @@
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/nodejs-iam-credentials.git",
-        "sha": "c932c45d344742352c5576f563bee5a0dcdbe514"
+        "remote": "https://github.com/googleapis/nodejs-iam-credentials.git",
+        "sha": "44d354ace22f3e5d6e30be8efd2eeb1babb1256f"
       }
     },
     {
