@@ -24,7 +24,6 @@ async function main(serviceAccount, scopes) {
   // const serviceAccount = 'ACCOUNT_EMAIL_OR_UNIQUEID'
   // const scopes = 'my-scopes', e.g., 'https://www.googleapis.com/auth/iam'
 
-
   // Creates a client
   const client = new IAMCredentialsClient();
 
