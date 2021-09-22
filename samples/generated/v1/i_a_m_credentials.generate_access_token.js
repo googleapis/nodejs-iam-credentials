@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name, payload) {
-  // [START credentials_sign_jwt_sample]
+function main(name, scope) {
+  // [START credentials_generate_access_token_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
@@ -40,9 +39,19 @@ function main(name, payload) {
    */
   // const delegates = 'abc123'
   /**
-   *  Required. The JWT payload to sign: a JSON object that contains a JWT Claims Set.
+   *  Required. Code to identify the scopes to be included in the OAuth 2.0 access token.
+   *  See https://developers.google.com/identity/protocols/googlescopes for more
+   *  information.
+   *  At least one value required.
    */
-  // const payload = 'abc123'
+  // const scope = 'abc123'
+  /**
+   *  The desired lifetime duration of the access token in seconds.
+   *  Must be set to a value less than or equal to 3600 (1 hour). If a value is
+   *  not specified, the token's lifetime will be set to a default value of one
+   *  hour.
+   */
+  // const lifetime = ''
 
   // Imports the Credentials library
   const {IAMCredentialsClient} = require('@google-cloud/iam-credentials').v1;
@@ -50,20 +59,20 @@ function main(name, payload) {
   // Instantiates a client
   const credentialsClient = new IAMCredentialsClient();
 
-  async function signJwt() {
+  async function generateAccessToken() {
     // Construct request
     const request = {
       name,
-      payload,
+      scope,
     };
 
     // Run request
-    const response = await credentialsClient.signJwt(request);
+    const response = await credentialsClient.generateAccessToken(request);
     console.log(response);
   }
 
-  signJwt();
-  // [END credentials_sign_jwt_sample]
+  generateAccessToken();
+  // [END credentials_generate_access_token_sample]
 }
 
 process.on('unhandledRejection', err => {

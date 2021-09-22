@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main(name, payload) {
-  // [START credentials_sign_blob_sample]
+  // [START credentials_sign_jwt_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
@@ -40,9 +39,9 @@ function main(name, payload) {
    */
   // const delegates = 'abc123'
   /**
-   *  Required. The bytes to sign.
+   *  Required. The JWT payload to sign: a JSON object that contains a JWT Claims Set.
    */
-  // const payload = 'Buffer.from('string')'
+  // const payload = 'abc123'
 
   // Imports the Credentials library
   const {IAMCredentialsClient} = require('@google-cloud/iam-credentials').v1;
@@ -50,7 +49,7 @@ function main(name, payload) {
   // Instantiates a client
   const credentialsClient = new IAMCredentialsClient();
 
-  async function signBlob() {
+  async function signJwt() {
     // Construct request
     const request = {
       name,
@@ -58,12 +57,12 @@ function main(name, payload) {
     };
 
     // Run request
-    const response = await credentialsClient.signBlob(request);
+    const response = await credentialsClient.signJwt(request);
     console.log(response);
   }
 
-  signBlob();
-  // [END credentials_sign_blob_sample]
+  signJwt();
+  // [END credentials_sign_jwt_sample]
 }
 
 process.on('unhandledRejection', err => {

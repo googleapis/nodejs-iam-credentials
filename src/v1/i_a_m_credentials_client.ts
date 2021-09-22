@@ -365,6 +365,10 @@ export class IAMCredentialsClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.generateAccessToken(request);
+   *
+   * @example <caption>include:samples/generated/v1/i_a_m_credentials.generate_access_token.js</caption>
+   * region_tag:credentials_generate_access_token_sample
+   *
    */
   generateAccessToken(
     request?: protos.google.iam.credentials.v1.IGenerateAccessTokenRequest,
@@ -476,6 +480,10 @@ export class IAMCredentialsClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.generateIdToken(request);
+   *
+   * @example <caption>include:samples/generated/v1/i_a_m_credentials.generate_id_token.js</caption>
+   * region_tag:credentials_generate_id_token_sample
+   *
    */
   generateIdToken(
     request?: protos.google.iam.credentials.v1.IGenerateIdTokenRequest,
@@ -579,6 +587,10 @@ export class IAMCredentialsClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.signBlob(request);
+   *
+   * @example <caption>include:samples/generated/v1/i_a_m_credentials.sign_blob.js</caption>
+   * region_tag:credentials_sign_blob_sample
+   *
    */
   signBlob(
     request?: protos.google.iam.credentials.v1.ISignBlobRequest,
@@ -678,6 +690,10 @@ export class IAMCredentialsClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.signJwt(request);
+   *
+   * @example <caption>include:samples/generated/v1/i_a_m_credentials.sign_jwt.js</caption>
+   * region_tag:credentials_sign_jwt_sample
+   *
    */
   signJwt(
     request?: protos.google.iam.credentials.v1.ISignJwtRequest,
