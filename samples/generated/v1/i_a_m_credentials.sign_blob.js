@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name, scope) {
-  // [START iamcredentials_v1_generated_IAMCredentials_GenerateAccessToken_async]
+function main(name, payload) {
+  // [START iamcredentials_v1_generated_IAMCredentials_SignBlob_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
@@ -40,19 +39,9 @@ function main(name, scope) {
    */
   // const delegates = 'abc123'
   /**
-   *  Required. Code to identify the scopes to be included in the OAuth 2.0 access token.
-   *  See https://developers.google.com/identity/protocols/googlescopes for more
-   *  information.
-   *  At least one value required.
+   *  Required. The bytes to sign.
    */
-  // const scope = 'abc123'
-  /**
-   *  The desired lifetime duration of the access token in seconds.
-   *  Must be set to a value less than or equal to 3600 (1 hour). If a value is
-   *  not specified, the token's lifetime will be set to a default value of one
-   *  hour.
-   */
-  // const lifetime = ''
+  // const payload = 'Buffer.from('string')'
 
   // Imports the Credentials library
   const {IAMCredentialsClient} = require('@google-cloud/iam-credentials').v1;
@@ -60,20 +49,20 @@ function main(name, scope) {
   // Instantiates a client
   const credentialsClient = new IAMCredentialsClient();
 
-  async function generateAccessToken() {
+  async function signBlob() {
     // Construct request
     const request = {
       name,
-      scope,
+      payload,
     };
 
     // Run request
-    const response = await credentialsClient.generateAccessToken(request);
+    const response = await credentialsClient.signBlob(request);
     console.log(response);
   }
 
-  generateAccessToken();
-  // [END iamcredentials_v1_generated_IAMCredentials_GenerateAccessToken_async]
+  signBlob();
+  // [END iamcredentials_v1_generated_IAMCredentials_SignBlob_async]
 }
 
 process.on('unhandledRejection', err => {

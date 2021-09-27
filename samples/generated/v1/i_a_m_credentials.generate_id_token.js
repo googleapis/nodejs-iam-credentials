@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name, payload) {
-  // [START iamcredentials_v1_generated_IAMCredentials_SignJwt_async]
+function main(name, audience) {
+  // [START iamcredentials_v1_generated_IAMCredentials_GenerateIdToken_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
@@ -40,9 +39,15 @@ function main(name, payload) {
    */
   // const delegates = 'abc123'
   /**
-   *  Required. The JWT payload to sign: a JSON object that contains a JWT Claims Set.
+   *  Required. The audience for the token, such as the API or account that this token
+   *  grants access to.
    */
-  // const payload = 'abc123'
+  // const audience = 'abc123'
+  /**
+   *  Include the service account email in the token. If set to `true`, the
+   *  token will contain `email` and `email_verified` claims.
+   */
+  // const includeEmail = true
 
   // Imports the Credentials library
   const {IAMCredentialsClient} = require('@google-cloud/iam-credentials').v1;
@@ -50,20 +55,20 @@ function main(name, payload) {
   // Instantiates a client
   const credentialsClient = new IAMCredentialsClient();
 
-  async function signJwt() {
+  async function generateIdToken() {
     // Construct request
     const request = {
       name,
-      payload,
+      audience,
     };
 
     // Run request
-    const response = await credentialsClient.signJwt(request);
+    const response = await credentialsClient.generateIdToken(request);
     console.log(response);
   }
 
-  signJwt();
-  // [END iamcredentials_v1_generated_IAMCredentials_SignJwt_async]
+  generateIdToken();
+  // [END iamcredentials_v1_generated_IAMCredentials_GenerateIdToken_async]
 }
 
 process.on('unhandledRejection', err => {
