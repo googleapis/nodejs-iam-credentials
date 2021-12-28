@@ -12,5 +12,5 @@
   "name": "iamcredentials",
   "issue_tracker": "https://github.com/googleapis/nodejs-iam-credentials/issues",
   "api_shortname": "iamcredentials",
-  "library_type": ""
+  "library_type": "GAPIC_AUTO"
 }
